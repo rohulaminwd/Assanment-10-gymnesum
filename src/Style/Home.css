@@ -1,0 +1,26 @@
+.Logo{
+    width: 100px;
+}
+.bg-nav{
+    background-color: #4f4fb7;
+}
+.link{
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: .4s;
+}
+.link:hover{
+    color: tomato;
+}
+.active-link{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 700;
+    color: tomato;
+}
+.active-link:hover{
+    color: tomato;
+}
+/* navbar style end */
+

@@ -1,0 +1,22 @@
+.footer-container{
+    background-color: #3e3ea1;
+}
+.logo{
+    width: 110px;
+    margin: 0 auto;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.footer-item{
+    background-color: #5454c6;
+    padding: 18px;
+    border-radius: 10px;
+}
+.bg-input{
+    background-color: #e0e0f9;
+}
+
+/* https://themetechmount.com/html/gimmer/service-one.html */
