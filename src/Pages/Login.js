@@ -3,12 +3,21 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../Images/google.png'
 import facebook from '../Images/fb.png'
 import "../Style/Login.css"
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+    
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -17,8 +26,12 @@ const Login = () => {
     const handlePassword = event => {
         setPassword(event.target.value);
     }
+    if(user){
+        navigate('/about')
+    }
     const handleSignIn = event => {
         event.preventDefault();
+        signInWithEmailAndPassword(email,password);
     }
     return (
         <div className='login-container'>
@@ -32,6 +45,10 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input onBlur={handlePassword} type="password" name="password" id="" />
                 </div>
+                {
+                    loading && <p>Loading...</p>
+                }
+                <span style={{color: 'red'}}>{error}</span>
                 <div className="btn-item">
                     <button className='login-btn btn'>Login</button>
                     <p>New to Gymnasium? <Link className='signup-link' to='/signup'>Create New Account</Link> </p>

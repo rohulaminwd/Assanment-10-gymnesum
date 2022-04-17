@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import google from '../Images/google.png'
 import facebook from '../Images/fb.png'
 import "../Style/Login.css"
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +12,12 @@ const SignUp = () => {
     const [Correct, setCorrectPss] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        err,
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -23,9 +31,21 @@ const SignUp = () => {
         setCorrectPss(event.target.value);
     }
 
+    if(user){
+        navigate('/')
+    }
 
     const handleCreatUser = (event) => {
         event.preventDefault();
+        if(password !== Correct){
+            setError('Your password did not match')
+            return;
+        }
+        if(password.length < 6){
+            setError('password mast be 6 character')
+            return
+        }
+        createUserWithEmailAndPassword(email, password)
     }
     return (
         <div className='login-container'>
@@ -43,6 +63,9 @@ const SignUp = () => {
                     <label htmlFor="password">Correct Password</label>
                     <input onBlur={handleCorrectPass} type="password" name="password" id="" required />
                 </div>
+                {
+                    loading && <p>Loading...</p>
+                }
                 <span style={{color: 'red'}}>{error}</span>
                 <div className="btn-item">
                     <button className='login-btn btn'>Sign Up</button>
