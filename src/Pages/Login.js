@@ -11,13 +11,13 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-    
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -27,7 +27,7 @@ const Login = () => {
         setPassword(event.target.value);
     }
     if(user){
-        navigate('/about')
+        navigate(from, {replace: true})
     }
     const handleSignIn = event => {
         event.preventDefault();

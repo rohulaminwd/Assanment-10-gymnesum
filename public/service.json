@@ -1,0 +1,82 @@
+[
+    {
+      "id": "1",
+      "name": "Health & Fitness",
+      "title": "“To strengthen & tone-up your muscles, keep you in shape and posture.”",
+      "subtitle": "Explore The Festures",
+      "type": "service",
+      "img": "https://i.ibb.co/ysr5cBL/service-1.png"
+    },
+    {
+      "id": "2",
+      "name": "Psycho Training",
+      "title": "“Challenges are just opportunies in disguise. View all Services!”",
+      "subtitle": "Ultimate trainings",
+      "type": "service",
+      "img": "https://i.ibb.co/Jzx8vBF/service-2.png"
+    },
+    {
+      "id": "3",
+      "name": "Self Defence",
+      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "subtitle": "Strong people",
+      "type": "service",
+      "img": "https://i.ibb.co/bBDGPNQ/service-3.png"
+    },
+    {
+      "id": "4",
+      "name": "Rahul Sorkar",
+      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "rating": [1,2,3,4,5],
+      "type": "review",
+      "img": "https://i.ibb.co/sK4cyDg/team-1.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Self Defence",
+      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "rating": [1,2,3,4,5],
+      "type": "review",
+      "img": "https://i.ibb.co/9gKg5Dp/team-2.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Self Defence",
+      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "rating": [1,2,3,4,5],
+      "type": "review",
+      "img": "https://i.ibb.co/BGd6fL4/team-3.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Self Defence",
+      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "rating": [1,2,3,4,5],
+      "type": "review",
+      "img": "https://i.ibb.co/2kGzD6p/team-4.jpg"
+    },
+    {
+      "id": "7",
+      "name": "REGULAR MEMBERSHIP",
+      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "X", "X"],
+      "month": "10",
+      "type": "chekout",
+      "img": "https://i.ibb.co/qgNwKrd/member-bg1.jpg"
+    },
+    {
+      "id": "7",
+      "name": "REGULAR MEMBERSHIP",
+      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "X", "X"],
+      "month": "10",
+      "type": "chekout",
+      "img": "https://i.ibb.co/xLrfR8R/member-bg2.jpg"
+    },
+    {
+      "id": "7",
+      "name": "REGULAR MEMBERSHIP",
+      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "X", "X"],
+      "month": "10",
+      "type": "chekout",
+      "img": "https://i.ibb.co/7STPcVB/member-bg3.jpg"
+    }
+]

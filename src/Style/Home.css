@@ -23,4 +23,64 @@
     color: tomato;
 }
 /* navbar style end */
+.banner{
+    background-color: #dbdbfd;
+}
 
+.check-out{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 30px;
+}
+.checkout-item{
+    border: 10px;
+    box-shadow: 0px 0px 10px #ddd;
+    transition: all linear .4s;
+    background-color: #e1e1fd;
+}
+.checkout-item:hover{
+    background-color: tomato;
+}
+.check h3, button{
+    transition: all linear .4s;
+}
+.checkout-item:hover h3{
+    color: #fff;
+}
+.checkout-item:hover button{
+    color: #fff;
+}
+.title{
+    background-color: #e1e1fd;
+}
+.bg-chekout{
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* check out page end */
+.contact{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #ddd;
+}
+.google-map{
+    height: 500px;
+    border-radius: 16px;
+}
+
+/* about section */
+
+.my-goal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 30px;  
+}
+.goal-item{
+    border: 10px;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all linear .4s;
+}
+.goal-item:hover{
+    transform: translateY(-8px);
+}

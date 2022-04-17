@@ -16,7 +16,6 @@ const SignUp = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-        err,
       ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleEmail = event => {
