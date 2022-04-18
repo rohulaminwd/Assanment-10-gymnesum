@@ -32,14 +32,14 @@ const Home = () => {
             </div>
 
             <div className="service-section my-5 ">
-                <h3 className='my-5 fw-bold text-primary'>OUR BEST SERVICES!</h3>
+                <h3 className='my-5 fw-bold text-primary'>MY BEST SERVICES!</h3>
                 <div className="container">
                 <Service></Service>
                 </div>
             </div>
 
             <div className="client-review my-5">
-                <h3 className='my-5 fw-bold text-primary'>What Our Clients Say!</h3>
+                <h3 className='my-5 fw-bold text-primary'>What My Clients Say!</h3>
                 <div className="container">
                     <ClientReview></ClientReview>
                 </div>
