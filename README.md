@@ -1,4 +1,4 @@
-# My Gymnasium Service
+# My Gymnasium
 
 ## [Live link..!](https://gymnasium-99909.firebaseapp.com/)
 
