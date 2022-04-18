@@ -11,7 +11,7 @@ const CheckOut = () => {
             <div className="check-out container my-5">
             {
                 checkOut.map(i => <div>
-                    <div className="checkout-item">
+                    <div className="checkout-item" data-aos="zoom-in" data-aos-duration="1000">
                         <h3 className='fw-bold py-3'>REGULAR MEMBERSHIP</h3>
                         <div className="bg-check position-relative" style={{ backgroundImage: `url(${i.img})`}}>
                             <div className="text-light py-4 w-100 h-100 bg-dark bg-opacity-75">

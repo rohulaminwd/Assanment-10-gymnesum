@@ -1,5 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import "aos/dist/aos.css";
+import AOS from "aos";
 import Footer from './Component/Footer/Footer';
 import Navbars from './Component/Navbars';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
@@ -13,6 +15,7 @@ import Notfound from './Pages/Notfound';
 import SignUp from './Pages/SignUp';
 
 function App() {
+  AOS.init();
   return (
     <div className="App">
       <Navbars></Navbars>

@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-5 d-flex align-items-center justify-content-center">
-                        <div className="p-3 text-center">
+                        <div className="p-3 text-center" data-aos="fade-right" data-aos-duration="700">
                             <h1 className='fw-bold text-success'>Time To Start</h1>
                             <h1 className='fw-bold text-primary display-4'>GYMNASIUM</h1>
                             <p className='fw-bold my-3'>Welcome to my Gymnasium, This is Rohul Amin, I am a Gym trainer, A Personal trainer Who has that Extra Educational will have more Knowledge and tools to help you..!</p>
@@ -23,7 +23,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="col-md-5">
-                        <div className="p-3">
+                        <div className="p-3" data-aos="fade-left" data-aos-duration="800">
                             <img src={banner} className='img-fluid' alt="" />
                         </div>
                     </div>

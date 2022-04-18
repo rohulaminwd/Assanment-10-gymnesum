@@ -10,7 +10,7 @@ const ClientReview = () => {
         <div className='review'>
             {
                 clientReview.map(i => <div>
-                    <div className="review-item h-100">
+                    <div data-aos="zoom-in-up" data-aos-duration="800" className="review-item h-100">
                         <div className="img">
                             <img src={i.img} className="img-fluid" alt="" />
                         </div>

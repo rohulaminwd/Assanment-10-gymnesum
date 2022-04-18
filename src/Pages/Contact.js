@@ -15,12 +15,12 @@ const Contact = () => {
             <div className="container">
                 <div className="row my-5">
                     <div className="col-md-6">
-                        <div className="p-3 rounded-3">
+                        <div className="p-3 rounded-3" data-aos="zoom-in-right" data-aos-duration="800">
                             <img src={contact} className="img-fluid" alt="" />
                         </div>
                     </div>
                     <div className="col-md-6 p-3">
-                        <div className="border rounded-3 p-3 h-100 contact">
+                        <div className="border rounded-3 p-3 h-100 contact" data-aos="zoom-in-left" data-aos-duration="800">
                             <h3 className='fw-bold text-primary mb-4'>Contact Me</h3>
                             <form action="">
                                 <input className='form-control mb-3' type="text" name="name" placeholder='Enter Your name' id="" required/>
@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
 
             <div className="container">
-                <div className="location my-5">
+                <div className="location my-5" data-aos="zoom-in-up" data-aos-duration="1000">
                     {
                         map.map(i => <iframe className='google-map w-100' 
                         allowfullscreen="" 

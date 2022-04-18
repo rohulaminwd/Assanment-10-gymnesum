@@ -67,7 +67,7 @@ const SignUp = () => {
         toast('Existing user');
     }
     return (
-        <div className='login-container'>
+        <div className='login-container' data-aos="fade-down" data-aos-duration="800">
             { 
                 loading && <Loading></Loading>
             } 

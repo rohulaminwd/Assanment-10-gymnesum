@@ -11,7 +11,9 @@ const Service = () => {
         <div className='service'>
             {
                 servicesItem.map(i => <div className='text-start'>
-                    <div className="service-item">
+                    <div data-aos="zoom-in-down" 
+                        data-aos-duration="1000"
+                        className="service-item">
                         <div className="d-flex align-items-center justify-content-center  mb-3">
                             <div className="img">
                                 <img src={i.img} className='img-fluid' alt="" />

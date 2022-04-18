@@ -10,7 +10,7 @@ const About = () => {
     return (
         <>
         <div className='container my-5'>
-            <div className="card mb-3 text-start w-75 profile mx-auto">
+            <div className="card mb-3 text-start w-75 profile mx-auto" data-aos="fade-down" data-aos-duration="1000">
                 <div className="row g-0 d-flex align-items-center">
                     <div className="col-md-4">
                         <img src={Rohul} className="img-fluid rounded-start" alt=''/>
@@ -35,19 +35,19 @@ const About = () => {
         <div className="container my-5 text-start">
             <h4 className='text-success text-center fw-bolds my-5'>My MISSION VISION AND GOAL</h4>
             <div className="my-goal">
-                <div className="goal-item">
+                <div className="goal-item" data-aos="zoom-in-right" data-aos-duration="1000">
                     <div class="border p-2 partners rounded-3 bg-info bg-opacity-10 h-100">
                         <h4 class="fw-bold text-info">Our Goal</h4>
                         <p class="text-muted">We are working on the Millennium Development Goals. Ensuring food safety and food security, Sustainability, Climate Change, Environment</p>
                     </div>
                 </div>
-                <div className="goal-item">
+                <div className="goal-item" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div class="border p-2 partners rounded-3 bg-success bg-opacity-10 h-100">
                         <h4 class="fw-bold text-success">Our Vision</h4>
                         <p class="text-muted">My short-term vision is to place in a reputed organisation where I can enhance my skills and gain knowledge. My long-term goal is to get my organisation towards .</p>
                     </div>
                 </div>
-                <div className="goal-item">
+                <div className="goal-item" data-aos="zoom-in-left" data-aos-duration="1000">
                     <div class="border p-2 partners rounded-3 bg-primary bg-opacity-10 h-100">
                         <h4 class="fw-bold text-primary">Our Mission</h4>
                         <p class="text-muted">My mission is to be a good quality programmer. So I am working day and night to make my mission successful. Here are 100 life goal ideas to start building your future today! </p>

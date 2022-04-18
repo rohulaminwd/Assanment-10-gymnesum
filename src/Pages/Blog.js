@@ -6,7 +6,7 @@ const Blog = () => {
         <div className='container my-5'>
             <h2 className='my-5 text-primary'>Question and Answer</h2>
             <div className="answer text-start">
-                <div className="ans">
+                <div className="ans" data-aos="zoom-in-right" data-aos-duration="800">
                     <h6 className='text-danger fw-bold'>Why are you using firebase? What other options do you have to implement authentication?</h6>
                     <div className="my-3">
                         <p>Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords and many option so Everything can be made useful if
@@ -15,7 +15,7 @@ const Blog = () => {
                              </p>
                     </div>
                 </div>
-                <div className="ans">
+                <div className="ans" data-aos="zoom-in-left" data-aos-duration="800">
                     <h6 className='text-danger fw-bold'>What other services does firebase provide other than authentication..?</h6>
                     <div className="my-3">
                         <p>However, any platform as comprehensive as Firebase is bound to lack advanced features.Cloud Firestore, Cloud Functions, Authentication, 
@@ -24,7 +24,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <div className="row text-start ans my-5">
+            <div className="row text-start ans my-5" data-aos="zoom-in-up" data-aos-duration="1000">
                 <h6 className='text-danger fw-bold'>Difference between authorization and authentication..?</h6>
                 <div className="col-md-6">
                     <div className="">
