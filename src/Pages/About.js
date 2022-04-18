@@ -1,6 +1,6 @@
 import React from 'react';
 import "../Style/Home.css"
-import rohul from "../Images/rohul.png"
+import Rohul from "../Images/rohul.png"
 import {FiFacebook} from 'react-icons/fi'
 import {BsChatDotsFill} from 'react-icons/bs'
 import {BsTwitter} from 'react-icons/bs'
@@ -10,12 +10,12 @@ const About = () => {
     return (
         <>
         <div className='container my-5'>
-            <div className="card mb-3 text-start w-75 mx-auto">
-                <div className="row g-0">
+            <div className="card mb-3 text-start w-75 profile mx-auto">
+                <div className="row g-0 d-flex align-items-center">
                     <div className="col-md-4">
-                        <img src={rohul} className="img-fluid rounded-start" />
+                        <img src={Rohul} className="img-fluid rounded-start" alt=''/>
                     </div>
-                    <div className="col-md-8 d-flex align-items-center bg-success bg-opacity-10">
+                    <div className="col-md-8 d-flex align-items-center bg-success bg-opacity-10 h-100">
                         <div className="card-body">
                             <h4 class="fw-bold text-success">This is Rohul amin</h4>
                             <p className="card-text">I am a junior web developer, and Student in CSE of first base. 

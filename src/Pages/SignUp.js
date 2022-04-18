@@ -20,11 +20,12 @@ const SignUp = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
+        err
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [updateProfile, updating, updaterror] = useUpdateProfile(auth);
 
-    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
-    const [signInWithFacebook, userf, loadingf, errorf] = useSignInWithFacebook(auth);
+    const [signInWithGoogle, user1, , error1] = useSignInWithGoogle(auth);
+    const [signInWithFacebook, userf, , errorf] = useSignInWithFacebook(auth);
 
     const handleName = event => {
         setName(event.target.value);
@@ -41,15 +42,14 @@ const SignUp = () => {
     const handleCorrectPass = event => {
         setCorrectPss(event.target.value);
     }
-    if(loading1 || loadingf){
-        return <Loading></Loading>
-    }
-
     if(user || user1 || userf){
         navigate('/')
     }
-    if(error1 || errorf){
-        toast(error1, errorf)
+    if(error1 || err){
+        toast(error1, errorf || updaterror)
+    }
+    if(updating){
+        toast(updating);
     }
 
     const handleCreatUser = async (event) => {
@@ -64,14 +64,13 @@ const SignUp = () => {
         }
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
-        toast(error);
-        console.log(name)
+        toast('Existing user');
     }
     return (
         <div className='login-container'>
-            {
+            { 
                 loading && <Loading></Loading>
-            }
+            } 
             <h1>Sign Up</h1>
             <form onSubmit={handleCreatUser}>
                 <div className="input-item">

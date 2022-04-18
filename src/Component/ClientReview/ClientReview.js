@@ -4,13 +4,13 @@ import "./client.css"
 import {FaStar} from "react-icons/fa"
 
 const ClientReview = () => {
-    const [service, setService] = useService();
+    const [service] = useService();
     const clientReview = service.filter(item => item.type.includes("review"));
     return (
         <div className='review'>
             {
                 clientReview.map(i => <div>
-                    <div className="review-item">
+                    <div className="review-item h-100">
                         <div className="img">
                             <img src={i.img} className="img-fluid" alt="" />
                         </div>

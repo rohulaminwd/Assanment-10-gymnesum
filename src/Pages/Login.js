@@ -22,8 +22,8 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-      const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
-      const [signInWithFacebook, userf, loadingf, errorf] = useSignInWithFacebook(auth);
+      const [signInWithGoogle, user1, , error1] = useSignInWithGoogle(auth);
+      const [signInWithFacebook, userf, , errorf] = useSignInWithFacebook(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -32,13 +32,18 @@ const Login = () => {
     const handlePassword = event => {
         setPassword(event.target.value);
     }
+    if(error || error1 || errorf){
+        toast('some error')
+     }
     if(user || user1 || userf){
         navigate(from, {replace: true})
     }
+    console.log(user)
     const handleSignIn = event => {
         event.preventDefault();
         signInWithEmailAndPassword(email,password);
     }
+
     return (
         <div className='login-container'>
             {
@@ -54,7 +59,7 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input onBlur={handlePassword} type="password" name="password" id="" />
                 </div>
-                <span className='text-start' style={{color: 'red'}}>{error}</span>
+                <span style={{color: 'red'}}>{error}</span>
                 <div className="btn-item">
                     <button className='login-btn btn'>Login</button>
                     <p>New to Gymnasium? <Link className='signup-link' to='/signup'>Create New Account</Link> </p>
@@ -72,8 +77,8 @@ const Login = () => {
                     <img className='google' src={facebook} alt="" />
                     <p className='w-100 fw-bold mt-3 text-center'>Sign in With Facebook</p>
                 </div>
+                <ToastContainer></ToastContainer>
             </form>
-            <ToastContainer />
         </div>
     );
 };

@@ -107,3 +107,16 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+/* Responsive design */
+
+@media screen and (max-width: 500px) {
+    .answer, .my-goal, .check-out{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    } 
+    .profile{
+        width: 100% !important;
+    }
+  }
