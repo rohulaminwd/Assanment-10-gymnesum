@@ -4,6 +4,7 @@ import Footer from './Component/Footer/Footer';
 import Navbars from './Component/Navbars';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import About from './Pages/About';
+import Blog from './Pages/Blog';
 import CheckOut from './Pages/CheckOut';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
@@ -26,6 +27,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path="*" element={<Notfound></Notfound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -34,7 +34,7 @@
     {
       "id": "5",
       "name": "Self Defence",
-      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "title": "“After you decide to start we will make sure you get the best fitness program.”",
       "rating": [1,2,3,4,5],
       "type": "review",
       "img": "https://i.ibb.co/9gKg5Dp/team-2.jpg"
@@ -42,7 +42,7 @@
     {
       "id": "6",
       "name": "Self Defence",
-      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "title": "“We anywhere recommend gimmer for reaching your fitness goal.”",
       "rating": [1,2,3,4,5],
       "type": "review",
       "img": "https://i.ibb.co/BGd6fL4/team-3.jpg"
@@ -50,7 +50,7 @@
     {
       "id": "7",
       "name": "Self Defence",
-      "title": "“To Self Defence & tone-up your muscles, keep you in shape and posture.”",
+      "title": "“We would  always recommend gimmer for reaching your fitness goal.”",
       "rating": [1,2,3,4,5],
       "type": "review",
       "img": "https://i.ibb.co/2kGzD6p/team-4.jpg"
@@ -66,16 +66,16 @@
     {
       "id": "7",
       "name": "REGULAR MEMBERSHIP",
-      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "X", "X"],
-      "month": "10",
+      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "Fitness Orientation", "X"],
+      "month": "15",
       "type": "chekout",
       "img": "https://i.ibb.co/xLrfR8R/member-bg2.jpg"
     },
     {
       "id": "7",
       "name": "REGULAR MEMBERSHIP",
-      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "X", "X"],
-      "month": "10",
+      "title": ["Free Tutorials", "Aerobik Programmes", "Trainer Support", "Fitness Orientation", "Morning & Evening Batches"],
+      "month": "20",
       "type": "chekout",
       "img": "https://i.ibb.co/7STPcVB/member-bg3.jpg"
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { BsFillPersonFill } from 'react-icons/bs'
 import auth from '../firebase.init';
 import "../Style/Home.css"
 import logo from '../Images/logo.png'
@@ -25,9 +26,10 @@ const Navbars = () => {
                         <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/">HOME</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/about">ABOUT</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/checkout">CHECKOUT</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/blog">BLOG</NavLink>
                         <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/contact">CONTACT</NavLink>
                         {   user ?
-                            <button  onClick={SignOut} className='rounded-pill ms-2 btn btn-light'>U</button>
+                            <button  onClick={SignOut} className='rounded-pill ms-2 btn bt-social btn-light'><BsFillPersonFill></BsFillPersonFill></button>
                             :
                             <NavLink className={({ isActive }) => isActive ? "active-link" : "link"} to="/login">LOGIN</NavLink>
                         }

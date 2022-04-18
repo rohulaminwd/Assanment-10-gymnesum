@@ -19,8 +19,8 @@ const Home = () => {
                             <h1 className='fw-bold text-primary display-4'>GYMNASIUM</h1>
                             <p className='fw-bold my-3'>Welcome to my Gymnasium, This is Rohul Amin, I am a Gym trainer, A Personal trainer Who has that Extra Educational will have more Knowledge and tools to help you..!</p>
                             <div className="d-flex align-items-center justify-content-center mt-4">
-                                <button className='btn fw-bold btn-outline-primary border-3 rounded-pill me-3'>JOIN NOW</button>
-                                <button className='btn fw-bold btn-outline-primary border-3 rounded-pill'>VIEW MORE</button>
+                                <Link to='/checkout' className='btn fw-bold btn-outline-primary border-3 rounded-pill me-3'>JOIN NOW</Link>
+                                <Link to='/checkout' className='btn fw-bold btn-outline-primary border-3 rounded-pill'>VIEW MORE</Link>
                             </div>
                         </div>
                     </div>

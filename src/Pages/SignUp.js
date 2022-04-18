@@ -3,10 +3,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import google from '../Images/google.png'
 import facebook from '../Images/fb.png'
 import "../Style/Login.css"
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithFacebook, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Component/Loading';
 
 const SignUp = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [Correct, setCorrectPss] = useState('');
@@ -16,7 +20,15 @@ const SignUp = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const [updateProfile, updating, updaterror] = useUpdateProfile(auth);
+
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+    const [signInWithFacebook, userf, loadingf, errorf] = useSignInWithFacebook(auth);
+
+    const handleName = event => {
+        setName(event.target.value);
+    }
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -29,12 +41,18 @@ const SignUp = () => {
     const handleCorrectPass = event => {
         setCorrectPss(event.target.value);
     }
-
-    if(user){
-        navigate('/')
+    if(loading1 || loadingf){
+        return <Loading></Loading>
     }
 
-    const handleCreatUser = (event) => {
+    if(user || user1 || userf){
+        navigate('/')
+    }
+    if(error1 || errorf){
+        toast(error1, errorf)
+    }
+
+    const handleCreatUser = async (event) => {
         event.preventDefault();
         if(password !== Correct){
             setError('Your password did not match')
@@ -44,12 +62,22 @@ const SignUp = () => {
             setError('password mast be 6 character')
             return
         }
-        createUserWithEmailAndPassword(email, password)
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name });
+        toast(error);
+        console.log(name)
     }
     return (
         <div className='login-container'>
+            {
+                loading && <Loading></Loading>
+            }
             <h1>Sign Up</h1>
             <form onSubmit={handleCreatUser}>
+                <div className="input-item">
+                    <label htmlFor="email">Name</label>
+                    <input onBlur={handleName} type="text" name="name" id="" required />
+                </div>
                 <div className="input-item">
                     <label htmlFor="email">Email</label>
                     <input onBlur={handleEmail} type="email" name="email" id="" required />
@@ -62,9 +90,6 @@ const SignUp = () => {
                     <label htmlFor="password">Correct Password</label>
                     <input onBlur={handleCorrectPass} type="password" name="password" id="" required />
                 </div>
-                {
-                    loading && <p>Loading...</p>
-                }
                 <span style={{color: 'red'}}>{error}</span>
                 <div className="btn-item">
                     <button className='login-btn btn'>Sign Up</button>
@@ -75,15 +100,16 @@ const SignUp = () => {
                     <span>OR</span>
                     <div className="item"></div>
                 </div>
-                <div className="google-sign mb-3">
+                <div onClick={() => signInWithGoogle()} className="google-sign mb-3">
                     <img className='google' src={google} alt="" />
                     <p className='w-100 fw-bold mt-3 text-center'>Sign in With Google</p>
                 </div>
-                <div className="google-sign">
+                <div onClick={() => signInWithFacebook()} className="google-sign">
                     <img className='google' src={facebook} alt="" />
                     <p className='w-100 fw-bold mt-3 text-center'>Sign in With Facebook</p>
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };
